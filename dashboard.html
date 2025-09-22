@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Eco-Warriors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+  .leaderboard-section table, 
+  .leaderboard-section th, 
+  .leaderboard-section td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .leaderboard-section th {
+    background-color: #e0f7e9; /* light green shade */
+  }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">Eco-Warriors</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="learn.html">Lessons</a></li>
+                <li><a href="quiz.html">Quizzes</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="#" class="nav-button">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="user-summary">
+            <h2>Welcome, Bishwajit!</h2>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Eco-Points</h3>
+                    <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                    <p class="card-value">1250</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Badges Earned</h3>
+                    <div class="card-icon"><i class="fas fa-award"></i></div>
+                    <p class="card-value">5</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Challenges Completed</h3>
+                    <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                    <p class="card-value">12</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="leaderboard-section">
+            <h2>School Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>School</th>
+                        <th>Eco-Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Green Valley High School</td><td>56,400</td></tr>
+                    <tr><td>2</td><td>City Eco-Academy</td><td>45,120</td></tr>
+                    <tr><td>3</td><td>Sunrise Public School</td><td>38,980</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="recent-activity-section">
+            <h2>Recent Activities</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Completed the "Waste Segregation 101" challenge. (+200 points)</li>
+                <li><i class="fas fa-book-reader"></i> Finished the "Biodiversity Basics" lesson. (+50 points)</li>
+                <li><i class="fas fa-award"></i> Earned the "Water Warrior" badge!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eco-Warriors. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

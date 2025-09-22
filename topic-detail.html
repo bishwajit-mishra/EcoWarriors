@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Topic - Eco-Warriors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Eco-Warriors</a></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="learn.html" class="active">Lessons</a></li>
+                <li><a href="quiz.html">Quizzes</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="#" class="nav-button">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <main class="content-section topic-detail-main">
+        <h2 id="topic-heading"></h2>
+        
+        <div class="video-container">
+            <iframe id="youtube-video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-
+            media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="topic-description">
+            <h3>The Problem</h3>
+            <p id="problem-description"></p>
+            <h3>The Solution</h3>
+            <p id="solution-description"></p>
+        </div>
+
+        <div class="topic-actions">
+            <a id="take-quiz-link" class="cta-button">Take Quiz for this Topic</a>
+            <a href="learn.html" class="cta-button secondary">Back to Lessons</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eco-Warriors. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="topic-detail-script.js"></script>
+</body>
+</html>
