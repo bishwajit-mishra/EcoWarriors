@@ -70,6 +70,11 @@ function handleLogin(event) {
             // Check if the password matches
             if (user.password === password) {
                 alert('Login successful! Welcome, ' + user.name);
+
+            // Add this line to store the logged-in user's email
+                localStorage.setItem('loggedInUser', email);
+
+
                 // Redirect to the dashboard page
                 window.location.href = 'dashboard.html';
             } else {
@@ -81,4 +86,33 @@ function handleLogin(event) {
     } else {
         alert('Please enter both email and password.');
     }
+}
+
+// Function to update the dashboard with the user's name
+function updateDashboard() {
+    // Get the element where the welcome message is displayed
+    const welcomeMessageElement = document.getElementById('welcome-message');
+
+    // Get the currently logged-in user's email from Local Storage
+    // This assumes you saved the logged-in email during the login process
+    const loggedInEmail = localStorage.getItem('loggedInUser');
+
+    if (loggedInEmail) {
+        // Retrieve the full user object from Local Storage using the email
+        const userString = localStorage.getItem(loggedInEmail);
+        const user = JSON.parse(userString);
+
+        if (user && user.name) {
+            // Update the welcome message with the user's name
+            welcomeMessageElement.textContent = `Welcome, ${user.name}!`;
+        }
+    } else {
+        // If no user is logged in, redirect to the login page
+        window.location.href = 'login.html';
+    }
+}
+
+// Call the function when the dashboard page loads
+if (window.location.pathname.endsWith('dashboard.html')) {
+    updateDashboard();
 }
