@@ -87,6 +87,14 @@ function handleLogin(event) {
         alert('Please enter both email and password.');
     }
 }
+// Function to handle user logout
+function logoutUser() {
+    // Remove the logged-in user's email from Local Storage
+    localStorage.removeItem('loggedInUser');
+    
+    // Redirect the user to the login page
+    window.location.href = 'login.html';
+}
 
 // Function to update the dashboard with the user's name
 function updateDashboard() {
@@ -96,6 +104,11 @@ function updateDashboard() {
     // Get the currently logged-in user's email from Local Storage
     // This assumes you saved the logged-in email during the login process
     const loggedInEmail = localStorage.getItem('loggedInUser');
+
+    if (!loggedInEmail) {
+    window.location.href = 'login.html';
+    return; // Stop the rest of the function from running
+}
 
     if (loggedInEmail) {
         // Retrieve the full user object from Local Storage using the email
